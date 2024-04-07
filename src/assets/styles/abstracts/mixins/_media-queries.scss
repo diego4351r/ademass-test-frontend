@@ -1,0 +1,76 @@
+@use "sass:map";
+@use "../variables/breakpoints" as br;
+
+@mixin only-mobile {
+  /* For very small screen devices (576px and below) */
+  @media only screen and (max-width: map-get(br.$breakpoints, "small")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin xs {
+  /* Small screen devices (480px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "extra-small")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin sm {
+  /* Small screen devices (576px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "small")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin md {
+  /* Small screen devices (786px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "medium")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin lg {
+  /* Medium screen devices (992px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "large")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin xl {
+  /* Big screen devices (1200px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "extra-large")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin xxl {
+  /* Extra big screen devices (1400px and above) */
+  @media only screen and (min-width: map-get(br.$breakpoints, "extra-extra-large")) {
+    /* CSS Styling */
+    @content;
+  }
+}
+
+@mixin mq-from($mq-min) {
+  @media only screen and (min-width: $mq-min) {
+    @content;
+  }
+}
+
+@mixin mq-to($mq-max) {
+  @media only screen and (max-width: $mq-max) {
+    @content;
+  }
+}
+
+@mixin media-between($mq-min, $mq-max) {
+  @media only screen and (min-width: $mq-min) and (max-width: $mq-max) {
+    @content;
+  }
+}

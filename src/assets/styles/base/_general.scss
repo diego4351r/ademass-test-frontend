@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+@media (prefers-color-scheme: light) {
+  :root {
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
