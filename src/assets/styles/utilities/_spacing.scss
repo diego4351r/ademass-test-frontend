@@ -29,6 +29,7 @@
       margin-inline: $size-value;
     }
   }
+  
   .p {
     &-#{$size-name} {
       padding: $size-value;
@@ -52,4 +53,10 @@
       padding-inline: $size-value;
     }
   }
+}
+
+.controls-wrapper{
+  display: flex;
+  padding: 20px;
+  gap: size(4);
 }
